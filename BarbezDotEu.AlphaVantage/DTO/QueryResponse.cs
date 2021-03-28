@@ -11,12 +11,16 @@ namespace BarbezDotEu.AlphaVantage.DTO
     /// <summary>
     /// Implements the query response contract as defined by AlphaVantage.
     /// </summary>
-    public class QueryResponse : IHasHttpResponseMessage
+    public class QueryResponse : ICanFail
     {
         [JsonProperty("bestMatches")]
         public Match[] Matches { get; set; }
 
-        public HttpResponseMessage HttpResponseMessage { get; set; }
+        /// <inheritdoc/>
+        public HttpResponseMessage FailedResponse { get; set; }
+
+        /// <inheritdoc/>
+        public bool HasFailed => FailedResponse != null;
 
         /// <summary>
         /// Returns this provider-specific DTO to the shared DTO format for general use.
