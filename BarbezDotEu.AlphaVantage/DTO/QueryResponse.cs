@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
+using System;
 using System.Linq;
 using System.Net.Http;
 using BarbezDotEu.Provider.Interfaces;
@@ -14,7 +15,7 @@ namespace BarbezDotEu.AlphaVantage.DTO
     public class QueryResponse : ICanFail
     {
         [JsonProperty("bestMatches")]
-        public Match[] Matches { get; set; }
+        public Match[] Matches { get; set; } = Array.Empty<Match>();
 
         /// <inheritdoc/>
         public HttpResponseMessage FailedResponse { get; set; }
