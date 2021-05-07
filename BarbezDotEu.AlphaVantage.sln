@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarbezDotEu.AlphaVantage", "BarbezDotEu.AlphaVantage\BarbezDotEu.AlphaVantage.csproj", "{AD9B81DB-0639-475E-B569-5BD842544BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbezDotEu.AlphaVantage", "BarbezDotEu.AlphaVantage\BarbezDotEu.AlphaVantage.csproj", "{AD9B81DB-0639-475E-B569-5BD842544BEA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{5B85175C-038F-4193-9ABF-CDFCF9BABC63}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbezDotEu.Http", "..\BarbezDotEu.Http\BarbezDotEu.Http\BarbezDotEu.Http\BarbezDotEu.Http.csproj", "{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarbezDotEu.Provider", "..\BarbezDotEu.Provider\BarbezDotEu.Provider\BarbezDotEu.Provider\BarbezDotEu.Provider.csproj", "{3339E605-D2BD-43BB-A2EB-F1609E9D332F}"
 EndProject
@@ -21,10 +19,6 @@ Global
 		{AD9B81DB-0639-475E-B569-5BD842544BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD9B81DB-0639-475E-B569-5BD842544BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD9B81DB-0639-475E-B569-5BD842544BEA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3339E605-D2BD-43BB-A2EB-F1609E9D332F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3339E605-D2BD-43BB-A2EB-F1609E9D332F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3339E605-D2BD-43BB-A2EB-F1609E9D332F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -34,7 +28,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5D25FCF8-4B39-4C75-AFAA-9D4762381D1C} = {5B85175C-038F-4193-9ABF-CDFCF9BABC63}
 		{3339E605-D2BD-43BB-A2EB-F1609E9D332F} = {5B85175C-038F-4193-9ABF-CDFCF9BABC63}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
