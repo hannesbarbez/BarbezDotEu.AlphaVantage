@@ -2,37 +2,37 @@
 // Licensed under the GNU General Public License v3.0
 
 using System.Globalization;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace BarbezDotEu.AlphaVantage.DTO
 {
     public class Match
     {
-        [JsonProperty("1. symbol")]
+        [JsonPropertyName("1. symbol")]
         public string Symbol { get; set; }
 
-        [JsonProperty("2. name")]
+        [JsonPropertyName("2. name")]
         public string Name { get; set; }
 
-        [JsonProperty("3. type")]
+        [JsonPropertyName("3. type")]
         public string Type { get; set; }
 
-        [JsonProperty("4. region")]
+        [JsonPropertyName("4. region")]
         public string Region { get; set; }
 
-        [JsonProperty("5. marketOpen")]
+        [JsonPropertyName("5. marketOpen")]
         public string MarketOpen { get; set; }
 
-        [JsonProperty("6. marketClose")]
+        [JsonPropertyName("6. marketClose")]
         public string MarketClose { get; set; }
 
-        [JsonProperty("7. timezone")]
+        [JsonPropertyName("7. timezone")]
         public string TimeZone { get; set; }
 
-        [JsonProperty("8. currency")]
+        [JsonPropertyName("8. currency")]
         public string Currency { get; set; }
 
-        [JsonProperty("9. matchScore")]
+        [JsonPropertyName("9. matchScore")]
         public string MatchScore { get; set; }
 
         public double GetMatchScore()

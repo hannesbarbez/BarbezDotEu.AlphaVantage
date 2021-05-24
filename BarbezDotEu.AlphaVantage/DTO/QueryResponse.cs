@@ -4,8 +4,8 @@
 using System;
 using System.Linq;
 using System.Net.Http;
+using System.Text.Json.Serialization;
 using BarbezDotEu.Provider.Interfaces;
-using Newtonsoft.Json;
 
 namespace BarbezDotEu.AlphaVantage.DTO
 {
@@ -14,7 +14,7 @@ namespace BarbezDotEu.AlphaVantage.DTO
     /// </summary>
     public class QueryResponse : ICanFail
     {
-        [JsonProperty("bestMatches")]
+        [JsonPropertyName("bestMatches")]
         public Match[] Matches { get; set; } = Array.Empty<Match>();
 
         /// <inheritdoc/>
