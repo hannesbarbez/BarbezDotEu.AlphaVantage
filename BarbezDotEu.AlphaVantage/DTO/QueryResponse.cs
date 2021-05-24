@@ -3,25 +3,17 @@
 
 using System;
 using System.Linq;
-using System.Net.Http;
 using System.Text.Json.Serialization;
-using BarbezDotEu.Provider.Interfaces;
 
 namespace BarbezDotEu.AlphaVantage.DTO
 {
     /// <summary>
     /// Implements the query response contract as defined by AlphaVantage.
     /// </summary>
-    public class QueryResponse : ICanFail
+    public class QueryResponse
     {
         [JsonPropertyName("bestMatches")]
         public Match[] Matches { get; set; } = Array.Empty<Match>();
-
-        /// <inheritdoc/>
-        public HttpResponseMessage FailedResponse { get; set; }
-
-        /// <inheritdoc/>
-        public bool HasFailed => FailedResponse != null;
 
         /// <summary>
         /// Returns this provider-specific DTO to the shared DTO format for general use.

@@ -32,7 +32,7 @@ namespace BarbezDotEu.AlphaVantage.AlphaVantage
             var request = new HttpRequestMessage(HttpMethod.Get, queryUrl);
             request.Headers.Accept.Add(acceptHeader);
             var result = await this.Request<QueryResponse>(request);
-            return result?.AsBaseCompanyData();
+            return result.Content?.AsBaseCompanyData();
         }
     }
 }
