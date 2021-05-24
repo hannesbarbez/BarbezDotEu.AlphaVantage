@@ -9,7 +9,6 @@ using BarbezDotEu.AlphaVantage.DTO;
 using BarbezDotEu.AlphaVantage.Interfaces;
 using BarbezDotEu.Provider;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 namespace BarbezDotEu.AlphaVantage.AlphaVantage
@@ -19,7 +18,7 @@ namespace BarbezDotEu.AlphaVantage.AlphaVantage
         private readonly string symbolSearchUrl;
         private readonly MediaTypeWithQualityHeaderValue acceptHeader;
 
-        public AlphaVantageDataProvider(ILogger<IHostedService> logger, IConfiguration configuration, IHttpClientFactory httpClientFactory)
+        public AlphaVantageDataProvider(ILogger logger, IConfiguration configuration, IHttpClientFactory httpClientFactory)
             : base(logger, httpClientFactory)
         {
             this.symbolSearchUrl = configuration["Alphavantage:UrlSymbolSearch"];
