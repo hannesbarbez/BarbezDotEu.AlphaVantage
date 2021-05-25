@@ -13,9 +13,9 @@ namespace BarbezDotEu.AlphaVantage.Interfaces
     public interface IAlphaVantageDataProvider : IPoliteProvider
     {
         /// <summary>
-        /// Configures this <see cref="AlphaVantageDataProvider"/> so that it can successfully communicate with the Alpha Vantage APIs.
+        /// Configures this <see cref="IAlphaVantageDataProvider"/> so that it can successfully communicate with the Alpha Vantage APIs.
         /// </summary>
-        /// <param name="alphaVantageConfiguration">The <see cref="AlphaVantageConfiguration"/> to configure this <see cref="AlphaVantageDataProvider"/> with.</param>
+        /// <param name="alphaVantageConfiguration">The <see cref="AlphaVantageConfiguration"/> to configure this <see cref="IAlphaVantageDataProvider"/> with.</param>
         /// <remarks>
         /// Configuration is required before any APIs can be called.
         /// </remarks>

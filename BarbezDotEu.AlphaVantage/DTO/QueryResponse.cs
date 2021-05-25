@@ -12,6 +12,9 @@ namespace BarbezDotEu.AlphaVantage.DTO
     /// </summary>
     public class QueryResponse
     {
+        /// <summary>
+        /// Gets or sets the set of <see cref="BaseCompanyDataPartialMatch"/>es returned by the API.
+        /// </summary>
         [JsonPropertyName("bestMatches")]
         public BaseCompanyDataPartialMatch[] Matches { get; set; } = Array.Empty<BaseCompanyDataPartialMatch>();
 
