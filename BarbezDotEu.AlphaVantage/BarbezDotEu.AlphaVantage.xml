@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BarbezDotEu.AlphaVantage</name>
+    </assembly>
+    <members>
+        <member name="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration">
+            <summary>
+            Implements and houses configuration parameters to correctly connect to and communicate with Alpha Vantage's services.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration.MaxCallsPerDay">
+            <summary>
+            Gets the maximum number of calls allowed per day.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration.SymbolSearchUrl">
+            <summary>
+            Gets the fully-qualified URL to use to search for symbols, including the API key. However, omits the actual search symbol.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration.#ctor(System.String,System.String)">
+            <summary>
+            Constructs a new <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration"/> using given parameters.
+            </summary>
+            <param name="maxCallsPerDay">The max. number of calls per day before API calls become rate limited by Alpha Vantage.</param>
+            <param name="symbolSearchUrl">The fully-qualified URL to use to search for symbols, including the API key. However, omit the actual search symbol.</param>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration.#ctor(System.Int64,System.String)">
+            <summary>
+            Constructs a new <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration"/> using given parameters.
+            </summary>
+            <param name="maxCallsPerDay">The max. number of calls per day before API calls become rate limited by Alpha Vantage.</param>
+            <param name="symbolSearchUrl">The fully-qualified URL to use to search for symbols, including the API key. However, omit the actual search symbol.</param>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration.#ctor(System.String)">
+            <summary>
+            Constructs a new <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration"/> using all-default settings.
+            </summary>
+            <param name="apiKey">The API key (to be requested via Alpha Vantage's website prior to using this library).</param>
+        </member>
+        <member name="T:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider">
+            <summary>
+            Implements a data provider that connects to and can call Alpha Vantage APIs.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider.Configuration">
+            <summary>
+            Gets the <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration"/> this <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider"/> uses to communicate to the APIs.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider.#ctor(Microsoft.Extensions.Logging.ILogger,System.Net.Http.IHttpClientFactory)">
+            <summary>
+            Constructs a <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider"/>.
+            </summary>
+            <param name="logger">A <see cref="T:Microsoft.Extensions.Logging.ILogger"/> to use for logging.</param>
+            <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory"/> to use.</param>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider.Configure(BarbezDotEu.AlphaVantage.AlphaVantageConfiguration)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider.GetBaseCompanyDataFullyMatching(System.String,System.Boolean,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.AlphaVantage.AlphaVantageDataProvider.GetBaseCompanyDataPartialMatches(System.String,System.Boolean,System.Double)">
+            <inheritdoc/>
+        </member>
+        <member name="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch">
+            <summary>
+            Implements a base company data DTO that EXACTLY matches a query.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructs a new <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/>.
+            </summary>
+            <param name="currency">The currency.</param>
+            <param name="marketClose">When the market closes.</param>
+            <param name="marketOpen">When the market opens.</param>
+            <param name="name">The name of the company.</param>
+            <param name="region">The region the company is located in.</param>
+            <param name="symbol">The company's ticker symbol.</param>
+            <param name="timeZone">The timezone.</param>
+            <param name="type">The type.</param>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Symbol">
+            <summary>
+            Gets or sets the company's symbol.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Name">
+            <summary>
+            Gets or sets the company name.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.MarketOpen">
+            <summary>
+            Gets or sets when the market opens.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.MarketClose">
+            <summary>
+            Gets or sets when the market closes.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Timezone">
+            <summary>
+            Gets or sets the timezone.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Currency">
+            <summary>
+            Gets or sets the currency.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+        </member>
+        <member name="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch">
+            <summary>
+            Implements a base company data DTO that matches a query either completely, or to a certain extent only.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.Symbol">
+            <summary>
+            Gets or sets the symbol.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.Name">
+            <summary>
+            Gets or sets the company name.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.Region">
+            <summary>
+            Gets or sets the region.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.MarketOpen">
+            <summary>
+            Gets or sets the market open time.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.MarketClose">
+            <summary>
+            Gets or sets the market close time.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.TimeZone">
+            <summary>
+            Gets or sets the time zone.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.Currency">
+            <summary>
+            Gets or sets the currency.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.MatchScore">
+            <summary>
+            Gets or sets a percentage in which the result is a match in the context of a query.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.GetMatchScore">
+            <summary>
+            Gets the <see cref="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.MatchScore"/> as a double.
+            </summary>
+            <returns>The <see cref="P:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.MatchScore"/> as a double.</returns>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch.AsFullMatch">
+            <summary>
+            Assumes an therefore returns this <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch"/> is a <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/>.
+            </summary>
+            <returns>The <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/> representation of this <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch"/>.</returns>
+        </member>
+        <member name="T:BarbezDotEu.AlphaVantage.DTO.QueryResponse">
+            <summary>
+            Implements the query response contract as defined by Alpha Vantage.
+            </summary>
+        </member>
+        <member name="P:BarbezDotEu.AlphaVantage.DTO.QueryResponse.Matches">
+            <summary>
+            Gets or sets the set of <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataPartialMatch"/>es returned by the API.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.DTO.QueryResponse.GetFirstOfDefaultAbsoluteMatch">
+            <summary>
+            Returns, if exists, a <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/> DTO containing the first result that is a 100% match. Returns NULL when no 100% match exists, or no results are returned.
+            </summary>
+            <returns>The <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/> equivalent of this <see cref="T:BarbezDotEu.AlphaVantage.DTO.QueryResponse"/>.</returns>
+        </member>
+        <member name="T:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider">
+            <summary>
+            Defines a blueprint for a data provider that connects to and can call Alpha Vantage APIs.
+            </summary>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider.Configure(BarbezDotEu.AlphaVantage.AlphaVantageConfiguration)">
+            <summary>
+            Configures this <see cref="T:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider"/> so that it can successfully communicate with the Alpha Vantage APIs.
+            </summary>
+            <param name="alphaVantageConfiguration">The <see cref="T:BarbezDotEu.AlphaVantage.AlphaVantageConfiguration"/> to configure this <see cref="T:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider"/> with.</param>
+            <remarks>
+            Configuration is required before any APIs can be called.
+            </remarks>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider.GetBaseCompanyDataFullyMatching(System.String,System.Boolean,System.Double)">
+            <summary>
+            Gets base company data for a given symbol that EXACTLY matches a query.
+            Returns, if exists, a <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/> DTO containing the first result that is a 100% match. Returns NULL when no 100% match exists, or when no results were returned from the API.
+            </summary>
+            <param name="symbol">The symbol to return data for.</param>
+            <param name="retryOnError">Set to TRUE to retry the request, in case the initial request should prove unsuccessful.</param>
+            <param name="waitingMinutesBeforeRetry">The number of minutes to wait before automatically retrying re-sending the request, if the intention is to retry again upon error.</param>
+            <returns>The requested <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/>.</returns>
+        </member>
+        <member name="M:BarbezDotEu.AlphaVantage.Interfaces.IAlphaVantageDataProvider.GetBaseCompanyDataPartialMatches(System.String,System.Boolean,System.Double)">
+            <summary>
+            Gets base company data DTO that matches a query either completely, or to a certain extent only.
+            </summary>
+            <param name="symbol">The symbol to return data for.</param>
+            <param name="retryOnError">Set to TRUE to retry the request, in case the initial request should prove unsuccessful.</param>
+            <param name="waitingMinutesBeforeRetry">The number of minutes to wait before automatically retrying re-sending the request, if the intention is to retry again upon error.</param>
+            <returns>The requested <see cref="T:BarbezDotEu.AlphaVantage.DTO.BaseCompanyDataFullMatch"/>es.</returns>
+        </member>
+    </members>
+</doc>
