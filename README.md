@@ -1,2 +1,2 @@
 # BarbezDotEu.AlphaVantage
-A fast and efficient AlphaVantage client, yet also incomplete.
+A modern, work-in-progress AlphaVantage client.
