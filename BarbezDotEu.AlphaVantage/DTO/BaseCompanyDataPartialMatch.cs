@@ -6,7 +6,10 @@ using System.Text.Json.Serialization;
 
 namespace BarbezDotEu.AlphaVantage.DTO
 {
-    public class Match
+    /// <summary>
+    /// Implements a base company data DTO that matches a query either completely, or to a certain extent only.
+    /// </summary>
+    public class BaseCompanyDataPartialMatch
     {
         [JsonPropertyName("1. symbol")]
         public string Symbol { get; set; }
@@ -44,6 +47,11 @@ namespace BarbezDotEu.AlphaVantage.DTO
             }
 
             return default;
+        }
+
+        public BaseCompanyDataFullMatch AsFullMatch()
+        {
+            return new BaseCompanyDataFullMatch(this.Currency, this.MarketClose, this.MarketOpen, this.Name, this.Region, this.Symbol, this.TimeZone, this.Type);
         }
     }
 }

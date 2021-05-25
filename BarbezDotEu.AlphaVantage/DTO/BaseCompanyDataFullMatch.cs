@@ -3,9 +3,12 @@
 
 namespace BarbezDotEu.AlphaVantage.DTO
 {
-    public class BaseCompanyData
+    /// <summary>
+    /// Implements a base company data DTO that EXACTLY matches a query.
+    /// </summary>
+    public class BaseCompanyDataFullMatch
     {
-        public BaseCompanyData(string currency, string marketClose, string marketOpen, string name, string region, string symbol, string timeZone, string type)
+        public BaseCompanyDataFullMatch(string currency, string marketClose, string marketOpen, string name, string region, string symbol, string timeZone, string type)
         {
             Currency = currency;
             MarketClose = marketClose;

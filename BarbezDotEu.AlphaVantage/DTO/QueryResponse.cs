@@ -8,28 +8,25 @@ using System.Text.Json.Serialization;
 namespace BarbezDotEu.AlphaVantage.DTO
 {
     /// <summary>
-    /// Implements the query response contract as defined by AlphaVantage.
+    /// Implements the query response contract as defined by Alpha Vantage.
     /// </summary>
     public class QueryResponse
     {
         [JsonPropertyName("bestMatches")]
-        public Match[] Matches { get; set; } = Array.Empty<Match>();
+        public BaseCompanyDataPartialMatch[] Matches { get; set; } = Array.Empty<BaseCompanyDataPartialMatch>();
 
         /// <summary>
-        /// Returns this provider-specific DTO to the shared DTO format for general use.
+        /// Returns, if exists, a <see cref="BaseCompanyDataFullMatch"/> DTO containing the first result that is a 100% match. Returns NULL when no 100% match exists, or no results are returned.
         /// </summary>
-        /// <returns>The <see cref="BaseCompanyData"/> equivalent of this <see cref="QueryResponse"/>.</returns>
-        internal BaseCompanyData AsBaseCompanyData()
+        /// <returns>The <see cref="BaseCompanyDataFullMatch"/> equivalent of this <see cref="QueryResponse"/>.</returns>
+        internal BaseCompanyDataFullMatch GetFirstOfDefaultAbsoluteMatch()
         {
             // We only care for a 100% match.
             var m = GetFirstAbsoluteMatch();
-            if (m == null)
-                return null;
-
-            return new BaseCompanyData(m.Currency, m.MarketClose, m.MarketOpen, m.Name, m.Region, m.Symbol, m.TimeZone, m.Type);
+            return m?.AsFullMatch();
         }
 
-        private Match GetFirstAbsoluteMatch()
+        private BaseCompanyDataPartialMatch GetFirstAbsoluteMatch()
         {
             return Matches.FirstOrDefault(x => x.GetMatchScore() == 1);
         }
