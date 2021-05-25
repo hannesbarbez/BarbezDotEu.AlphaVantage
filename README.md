@@ -1,2 +1,2 @@
 # BarbezDotEu.AlphaVantage
-An unofficial, modern, and work-in-progress AlphaVantage client.
+An unofficial, modern, very much work-in-progress client for Alpha Vantage APIs.
