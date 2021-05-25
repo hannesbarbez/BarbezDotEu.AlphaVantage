@@ -2,6 +2,8 @@
 # BarbezDotEu.AlphaVantage
 An unofficial, modern, very much work-in-progress client for Alpha Vantage APIs.
 
+The binaries are available as a NuGet package from https://www.nuget.org/packages/BarbezDotEu.AlphaVantage/ or via e.g. Visual Studio's NuGet package manager.
+
 ## Contents
 
 - [AlphaVantageConfiguration](#T-BarbezDotEu-AlphaVantage-AlphaVantageConfiguration 'BarbezDotEu.AlphaVantage.AlphaVantageConfiguration')
