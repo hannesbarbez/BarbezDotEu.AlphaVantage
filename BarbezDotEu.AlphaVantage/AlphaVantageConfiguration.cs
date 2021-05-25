@@ -1,15 +1,14 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
-/// <summary>
-/// Quote from https://www.alphavantage.co/support/#support:
-/// "I have built a library/wrapper for Alpha Vantage with a specific programming language. May I open-source it on GitHub?
-/// Certainly - we truly appreciate the help and support from the community to make Alpha Vantage even more accessible and developer-friendly.
-/// However, we ask that your language-specific library/wrapper preserves the content of our JSON/CSV responses in both success and error cases.
-/// We consider it a top priority that our users get the original debugging and troubleshooting information from Alpha Vantage."
-/// 
-/// The latter is taken care of by BarbezDotEu.Provider, but should probably be improved upon as the functionality of this early-stage library is expanded upon.
-/// </summary>
+// Quote from https://www.alphavantage.co/support/#support:
+// "I have built a library/wrapper for Alpha Vantage with a specific programming language. May I open-source it on GitHub?
+// Certainly - we truly appreciate the help and support from the community to make Alpha Vantage even more accessible and developer-friendly.
+// However, we ask that your language-specific library/wrapper preserves the content of our JSON/CSV responses in both success and error cases.
+// We consider it a top priority that our users get the original debugging and troubleshooting information from Alpha Vantage."
+// 
+// The latter is taken care of by BarbezDotEu.Provider, but should probably be improved upon as the functionality of this early-stage library is expanded upon.
+
 namespace BarbezDotEu.AlphaVantage
 {
     /// <summary>
