@@ -1,5 +1,4 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Authors>Hannes Barbez</Authors>
@@ -19,9 +18,7 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="BarbezDotEu.Provider" Version="2.0.0" />
   </ItemGroup>
-
 </Project>
