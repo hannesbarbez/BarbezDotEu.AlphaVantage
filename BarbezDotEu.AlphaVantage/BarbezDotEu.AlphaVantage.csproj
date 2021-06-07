@@ -7,7 +7,7 @@
     <Product>BarbezDotEu.AlphaVantage</Product>
     <PackageId>BarbezDotEu.AlphaVantage</PackageId>
     <Copyright>©2021 Hannes Barbez</Copyright>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Description>An unofficial, modern, very much work-in-progress client for Alpha Vantage APIs.</Description>
     <PackageTags>basic;polite;alpha;vantage;integration;third-party integration;provider;barbez</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,10 +18,10 @@
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="BarbezDotEu.Provider" Version="2.0.1" />
-  </ItemGroup>
   <PropertyGroup>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BarbezDotEu.Provider" Version="2.0.2" />
+  </ItemGroup>
 </Project>
