@@ -7,7 +7,7 @@
     <Product>BarbezDotEu.AlphaVantage</Product>
     <PackageId>BarbezDotEu.AlphaVantage</PackageId>
     <Copyright>©2021 Hannes Barbez</Copyright>
-    <Version>1.0.2</Version>
+    <Version>2.2.0</Version>
     <Description>An unofficial, modern, very much work-in-progress client for Alpha Vantage APIs.</Description>
     <PackageTags>basic;polite;alpha;vantage;AlphaVantage;integration;third-party integration;provider;barbez</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -20,10 +20,10 @@
     <PackageIconUrl>https://i2.wp.com/barbez.eu/wp-content/uploads/2020/02/cropped-BarbezDotEu-logo-1.png?resize=64%2C64</PackageIconUrl>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <PropertyGroup>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="BarbezDotEu.Provider" Version="2.2.0" />
   </ItemGroup>
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
 </Project>
