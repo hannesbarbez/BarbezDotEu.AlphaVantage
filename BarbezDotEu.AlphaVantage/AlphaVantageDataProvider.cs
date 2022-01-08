@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
-using System;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -10,7 +9,7 @@ using BarbezDotEu.AlphaVantage.Interfaces;
 using BarbezDotEu.Provider;
 using Microsoft.Extensions.Logging;
 
-namespace BarbezDotEu.AlphaVantage.AlphaVantage
+namespace BarbezDotEu.AlphaVantage
 {
     /// <summary>
     /// Implements a data provider that connects to and can call Alpha Vantage APIs.
