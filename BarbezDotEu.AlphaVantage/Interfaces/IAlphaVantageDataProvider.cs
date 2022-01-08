@@ -13,15 +13,6 @@ namespace BarbezDotEu.AlphaVantage.Interfaces
     public interface IAlphaVantageDataProvider : IPoliteProvider
     {
         /// <summary>
-        /// Configures this <see cref="IAlphaVantageDataProvider"/> so that it can successfully communicate with the Alpha Vantage APIs.
-        /// </summary>
-        /// <param name="alphaVantageConfiguration">The <see cref="AlphaVantageConfiguration"/> to configure this <see cref="IAlphaVantageDataProvider"/> with.</param>
-        /// <remarks>
-        /// Configuration is required before any APIs can be called.
-        /// </remarks>
-        void Configure(AlphaVantageConfiguration alphaVantageConfiguration);
-
-        /// <summary>
         /// Gets base company data for a given symbol that EXACTLY matches a query.
         /// Returns, if exists, a <see cref="BaseCompanyDataFullMatch"/> DTO containing the first result that is a 100% match. Returns NULL when no 100% match exists, or when no results were returned from the API.
         /// </summary>
