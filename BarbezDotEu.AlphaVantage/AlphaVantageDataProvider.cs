@@ -46,7 +46,7 @@ namespace BarbezDotEu.AlphaVantage.AlphaVantage
         public AlphaVantageDataProvider(ILogger logger, IHttpClientFactory httpClientFactory)
             : base(logger, httpClientFactory)
         {
-            this.acceptHeader = new MediaTypeWithQualityHeaderValue(MediaTypeNames.Application.Json);
+            this.acceptHeader = new MediaTypeWithQualityHeaderValue("application/json");
         }
 
         /// <inheritdoc/>
