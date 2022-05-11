@@ -21,6 +21,6 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="BarbezDotEu.Provider" Version="5.0.0" />
+    <PackageReference Include="BarbezDotEu.Provider" Version="5.0.1" />
   </ItemGroup>
 </Project>
