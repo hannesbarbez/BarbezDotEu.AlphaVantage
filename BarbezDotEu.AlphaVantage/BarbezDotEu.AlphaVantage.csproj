@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>Hannes Barbez</Authors>
     <Company>Hannes Barbez</Company>
     <Title>BarbezDotEu.AlphaVantage</Title>
     <Product>BarbezDotEu.AlphaVantage</Product>
     <PackageId>BarbezDotEu.AlphaVantage</PackageId>
-    <Copyright>©2023 Hannes Barbez</Copyright>
-    <Version>7.0.0</Version>
+    <Copyright>©2024 Hannes Barbez</Copyright>
+    <Version>8.0.0</Version>
     <Description>An unofficial, modern, very much work-in-progress client for Alpha Vantage APIs.</Description>
     <PackageTags>basic;polite;alpha;vantage;AlphaVantage;integration;third-party integration;provider;barbez</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -17,10 +17,16 @@
     <RepositoryUrl>https://github.com/hannesbarbez/BarbezDotEu.AlphaVantage</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageIconUrl>https://api.nuget.org/v3-flatcontainer/barbezdoteu.twitter/5.0.0/icon</PackageIconUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>ICON.png</PackageIcon>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+        <None Include="..\ICON.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BarbezDotEu.Provider" Version="8.0.2" />
+    <PackageReference Include="BarbezDotEu.Provider" Version="9.0.0" />
   </ItemGroup>
 </Project>

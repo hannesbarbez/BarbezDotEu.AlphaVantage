@@ -14,27 +14,21 @@ namespace BarbezDotEu.AlphaVantage
     /// <summary>
     /// Implements and houses configuration parameters to correctly connect to and communicate with Alpha Vantage's services.
     /// </summary>
-    public class AlphaVantageConfiguration
+    /// <remarks>
+    /// Constructs a new <see cref="AlphaVantageConfiguration"/> using all-default settings.
+    /// </remarks>
+    /// <param name="apiKey">The API key (to be requested via Alpha Vantage's website prior to using this library).</param>
+    /// <param name="maxCallsPerDay">The maximum number of calls allowed per day.</param>
+    public class AlphaVantageConfiguration(string apiKey, long maxCallsPerDay)
     {
         /// <summary>
         /// Gets the maximum number of calls allowed per day.
         /// </summary>
-        public long MaxCallsPerDay { get; }
+        public long MaxCallsPerDay { get; } = maxCallsPerDay;
 
         /// <summary>
         /// Gets the fully-qualified URL to use to search for symbols, including the API key. However, omits the actual search symbol.
         /// </summary>
-        public string SymbolSearchUrl { get; }
-
-        /// <summary>
-        /// Constructs a new <see cref="AlphaVantageConfiguration"/> using all-default settings.
-        /// </summary>
-        /// <param name="apiKey">The API key (to be requested via Alpha Vantage's website prior to using this library).</param>
-        /// <param name="maxCallsPerDay">The maximum number of calls allowed per day.</param>
-        public AlphaVantageConfiguration(string apiKey, long maxCallsPerDay)
-        {
-            SymbolSearchUrl = $"https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey={apiKey}&keywords=";
-            MaxCallsPerDay = maxCallsPerDay;
-        }
+        public string SymbolSearchUrl { get; } = $"https://www.alphavantage.co/query?function=SYMBOL_SEARCH&apikey={apiKey}&keywords=";
     }
 }

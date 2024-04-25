@@ -1,7 +1,6 @@
 ﻿// Copyright (c) Hannes Barbez. All rights reserved.
 // Licensed under the GNU General Public License v3.0
 
-using System;
 using System.Linq;
 using System.Text.Json.Serialization;
 
@@ -16,7 +15,7 @@ namespace BarbezDotEu.AlphaVantage.DTO
         /// Gets or sets the set of <see cref="BaseCompanyDataPartialMatch"/>es returned by the API.
         /// </summary>
         [JsonPropertyName("bestMatches")]
-        public BaseCompanyDataPartialMatch[] Matches { get; set; } = Array.Empty<BaseCompanyDataPartialMatch>();
+        public BaseCompanyDataPartialMatch[] Matches { get; set; } = [];
 
         /// <summary>
         /// Returns, if exists, a <see cref="BaseCompanyDataFullMatch"/> DTO containing the first result that is a 100% match. Returns NULL when no 100% match exists, or no results are returned.
