@@ -35,6 +35,6 @@
         <None Include="..\ICON.png" Pack="true" PackagePath="\" />
     </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BarbezDotEu.Provider" Version="10.0.0" />
+    <PackageReference Include="BarbezDotEu.Provider" Version="10.0.1" />
   </ItemGroup>
 </Project>
